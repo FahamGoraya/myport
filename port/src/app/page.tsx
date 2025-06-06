@@ -217,7 +217,7 @@ function Portfolio() {
           <div className="hero-content">
             <h1 className="hero-title">My Projects</h1>
             <p className="hero-description">
-              A collection of web applications, tools, and experiments I've
+              A collection of web applications, tools, and experiments I&apos;ve
               built using modern technologies.
             </p>
             <Link href="#projects" className="hero-button">
@@ -233,7 +233,7 @@ function Portfolio() {
           <div className="projects-header">
             <h2 className="projects-title">My Projects</h2>
             <p className="projects-description">
-              Here are some of the projects I've worked on recently
+              Here are some of the projects I&apos;ve worked on recently
             </p>
 
             {/* Filter Buttons */}
@@ -354,7 +354,9 @@ function Portfolio() {
       {/* Footer */}
       <footer className="footer">
         <div className="footer-container">
-          <p className="footer-text">Made using Next.js, and with a dream</p>
+          <p className="footer-text">
+            &copy; 2024 John Doe. All rights reserved.
+          </p>
         </div>
       </footer>
     </div>
