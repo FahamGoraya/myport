@@ -1,106 +1,46 @@
 "use client";
 
-import Link from "next/link";
-import { useState } from "react";
-import styles from "./Navbar.module.css";
-import MyLog from "../assets/my_logo-removebg-preview.png";
 import Image from "next/image";
+import my_logo from "../assets/my_logo-removebg-preview.png";
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
   return (
-    <nav className={styles.navbar}>
-      <div className={styles.container}>
-        <div className={styles.logo}>
-          <Image src={MyLog} alt="My Logo" height={100} width={100} priority />
+    <nav
+      style={{
+        padding: "1rem 5%",
+        background: "rgba(0, 0, 0, 0.3)",
+        backdropFilter: "blur(10px)",
+        borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
+      }}
+    >
+      <div
+        style={{
+          maxWidth: "1200px",
+          margin: "0 auto",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          color: "white",
+        }}
+      >
+        <div style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
+          <Image src={my_logo} alt="Profile" width={80} height={80} />
         </div>
-
-        <ul className={styles.navLinks}>
-          <li>
-            <Link href="#about">About</Link>
-          </li>
-          <li>
-            <Link href="#projects">Projects</Link>
-          </li>
-          <li>
-            <Link href="#skills">Skills</Link>
-          </li>
-          <li>
-            <Link href="#contact">Contact</Link>
-          </li>
-          <li>
-            <a href="/resume.pdf" target="_blank">
-              Resume
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://linkedin.com/in/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
-            </a>
-          </li>
-        </ul>
-
-        <button
-          className={styles.menuButton}
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          ☰
-        </button>
+        <div style={{ display: "flex", gap: "2rem" }}>
+          <a href="#" style={{ color: "white", textDecoration: "none" }}>
+            Home
+          </a>
+          <a href="#" style={{ color: "white", textDecoration: "none" }}>
+            About
+          </a>
+          <a href="#" style={{ color: "white", textDecoration: "none" }}>
+            Projects
+          </a>
+          <a href="#" style={{ color: "white", textDecoration: "none" }}>
+            Contact
+          </a>
+        </div>
       </div>
-
-      {menuOpen && (
-        <ul className={styles.mobileMenu}>
-          <li>
-            <Link href="#about" onClick={() => setMenuOpen(false)}>
-              About
-            </Link>
-          </li>
-          <li>
-            <Link href="#projects" onClick={() => setMenuOpen(false)}>
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link href="#skills" onClick={() => setMenuOpen(false)}>
-              Skills
-            </Link>
-          </li>
-          <li>
-            <Link href="#contact" onClick={() => setMenuOpen(false)}>
-              Contact
-            </Link>
-          </li>
-          <li>
-            <a href="/resume.pdf" target="_blank">
-              Resume
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/yourusername" target="_blank">
-              GitHub
-            </a>
-          </li>
-          <li>
-            <a href="https://linkedin.com/in/yourusername" target="_blank">
-              LinkedIn
-            </a>
-          </li>
-        </ul>
-      )}
     </nav>
   );
 }
