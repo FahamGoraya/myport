@@ -125,7 +125,7 @@ export default function Home() {
         </p>
         <div className={styles.socialLinks}>
           <a
-            href="mailto:fahamgoraya@gmail.com?subject=Website Inquiry&body=Hi, I visited your website and would like to get in touch."
+            href="mailto:fahamgoraya@gmail.com?subject=Website Inquiry&body=Hi, I visited your website and would like to connect."
             className={styles.socialLink}
           >
             <Mail size={24} />
