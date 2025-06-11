@@ -27,10 +27,10 @@ export default function Navbar() {
           <Image src={my_logo} alt="Profile" width={80} height={80} />
         </div>
         <div style={{ display: "flex", gap: "2rem" }}>
-          <a href="#" style={{ color: "white", textDecoration: "none" }}>
+          <a href="/" style={{ color: "white", textDecoration: "none" }}>
             Home
           </a>
-          <a href="#" style={{ color: "white", textDecoration: "none" }}>
+          <a href="/about" style={{ color: "white", textDecoration: "none" }}>
             About
           </a>
           <a href="#" style={{ color: "white", textDecoration: "none" }}>

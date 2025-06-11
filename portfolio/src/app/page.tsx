@@ -5,32 +5,25 @@ import Navbar from "@/components/My_header";
 import { Mail, Linkedin, Github } from "lucide-react";
 import Image from "next/image";
 import profile_img from "../assets/pfp.png";
+import ReactOriginal from "devicons-react/icons/ReactOriginal";
+import JavascriptOriginal from "devicons-react/icons/JavascriptPlain";
+import TypescriptOriginal from "devicons-react/icons/TypescriptPlain";
+import COriginal from "devicons-react/icons/COriginal";
+import CplusplusOriginal from "devicons-react/icons/CplusplusOriginal";
+import JavaOriginalWordmark from "devicons-react/icons/JavaOriginalWordmark";
+import PythonOriginalWordmark from "devicons-react/icons/PythonOriginalWordmark";
+import FlutterOriginal from "devicons-react/icons/FlutterOriginal";
+import FirebaseOriginal from "devicons-react/icons/FirebaseOriginal";
+import AzuresqldatabasePlain from "devicons-react/icons/AzuresqldatabasePlain";
+import MongodbOriginalWordmark from "devicons-react/icons/MongodbOriginalWordmark";
+import AndroidstudioOriginal from "devicons-react/icons/AndroidstudioOriginal";
+import IntellijOriginal from "devicons-react/icons/IntellijOriginal";
+import PycharmOriginal from "devicons-react/icons/PycharmOriginal";
+import NextjsPlain from "devicons-react/icons/NextjsPlain";
+import VercelOriginalWordmark from "devicons-react/icons/VercelOriginalWordmark";
 
 export default function Home() {
   const router = useRouter();
-
-  const programmingLanguages = [
-    { name: "C", icon: "⚛️" },
-    { name: "C++", icon: "/icons/cpp.png" },
-    { name: "CSS", icon: "/icons/css.png" },
-    { name: "HTML", icon: "/icons/html.png" },
-    { name: "Java", icon: "/icons/java.png" },
-    { name: "JavaScript", icon: "/icons/javascript.png" },
-    { name: "Python", icon: "/icons/python.png" },
-    { name: "Assembly", icon: "/icons/r.png" },
-    { name: "SQL", icon: "/icons/sql.png" },
-    { name: "TypeScript", icon: "/icons/typescript.png" },
-  ];
-
-  const developerTools = [
-    { name: "Vercel", icon: "/assets/pfp.png" },
-    { name: "Firebase", icon: "/icons/firebase.png" },
-    { name: "Git", icon: "/icons/git.png" },
-    { name: "GitHub", icon: "/icons/github.png" },
-    { name: "MongoDB", icon: "/icons/mongodb.png" },
-    { name: "VS Code", icon: "/icons/vscode.png" },
-    { name: "React", icon: "/icons/react.png" },
-  ];
 
   return (
     <div className={styles.container}>
@@ -40,9 +33,7 @@ export default function Home() {
           <h1 className={styles.heroTitle}>
             Hi, I'm <span className={styles.accent}>Faham Goraya</span>
           </h1>
-          <p className={styles.heroSubtitle}>
-            Full Stack Developer & UI/UX Designer
-          </p>
+          <p className={styles.heroSubtitle}>Full Stack Developer</p>
           <p className={styles.heroDescription}>
             I create beautiful, functional web applications that solve
             real-world problems. Passionate about clean code, great design, and
@@ -85,17 +76,80 @@ export default function Home() {
             <div className={styles.skillCategoryHeader}>
               <span className={styles.codeIcon}>{"<>"}</span>
               <h3 className={styles.skillCategoryTitle}>
-                Programming Languages
+                Languages/Frameworks
               </h3>
             </div>
             <div className={styles.skillIconGrid}>
-              {programmingLanguages.map((lang, index) => (
-                <div key={index} className={styles.skillIconWrapper}>
-                  <div className={styles.skillIcon}>
-                    <div className={styles.iconPlaceholder}>{lang.icon}</div>
+              <div className={styles.skillIconWrapper}>
+                <div className={styles.skillIcon}>
+                  <div className={styles.iconPlaceholder}>
+                    <ReactOriginal size={40} />
                   </div>
                 </div>
-              ))}
+              </div>
+
+              <div className={styles.skillIconWrapper}>
+                <div className={styles.skillIcon}>
+                  <div className={styles.iconPlaceholder}>
+                    <JavascriptOriginal size={40} />
+                  </div>
+                </div>
+              </div>
+
+              <div className={styles.skillIconWrapper}>
+                <div className={styles.skillIcon}>
+                  <div className={styles.iconPlaceholder}>
+                    <TypescriptOriginal size={40} />
+                  </div>
+                </div>
+              </div>
+
+              <div className={styles.skillIconWrapper}>
+                <div className={styles.skillIcon}>
+                  <div className={styles.iconPlaceholder}>
+                    <COriginal size={40} />
+                  </div>
+                </div>
+              </div>
+
+              <div className={styles.skillIconWrapper}>
+                <div className={styles.skillIcon}>
+                  <div className={styles.iconPlaceholder}>
+                    <CplusplusOriginal size={40} />
+                  </div>
+                </div>
+              </div>
+
+              <div className={styles.skillIconWrapper}>
+                <div className={styles.skillIcon}>
+                  <div className={styles.iconPlaceholder}>
+                    <JavaOriginalWordmark size={40} />
+                  </div>
+                </div>
+              </div>
+
+              <div className={styles.skillIconWrapper}>
+                <div className={styles.skillIcon}>
+                  <div className={styles.iconPlaceholder}>
+                    <PythonOriginalWordmark size={40} />
+                  </div>
+                </div>
+              </div>
+
+              <div className={styles.skillIconWrapper}>
+                <div className={styles.skillIcon}>
+                  <div className={styles.iconPlaceholder}>
+                    <FlutterOriginal size={40} />
+                  </div>
+                </div>
+              </div>
+              <div className={styles.skillIconWrapper}>
+                <div className={styles.skillIcon}>
+                  <div className={styles.iconPlaceholder}>
+                    <NextjsPlain size={40} />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -105,15 +159,59 @@ export default function Home() {
               <h3 className={styles.skillCategoryTitle}>Developer Tools</h3>
             </div>
             <div className={styles.skillIconGrid}>
-              {developerTools.map((tool, index) => (
-                <div key={index} className={styles.skillIconWrapper}>
-                  <div className={styles.skillIcon}>
-                    <div className={styles.iconPlaceholder}>
-                      {tool.name.charAt(0)}
-                    </div>
+              <div className={styles.skillIconWrapper}>
+                <div className={styles.skillIcon}>
+                  <div className={styles.iconPlaceholder}>
+                    <FirebaseOriginal size={40} />
                   </div>
                 </div>
-              ))}
+              </div>
+
+              <div className={styles.skillIconWrapper}>
+                <div className={styles.skillIcon}>
+                  <div className={styles.iconPlaceholder}>
+                    <AzuresqldatabasePlain size={40} />
+                  </div>
+                </div>
+              </div>
+
+              <div className={styles.skillIconWrapper}>
+                <div className={styles.skillIcon}>
+                  <div className={styles.iconPlaceholder}>
+                    <MongodbOriginalWordmark size={40} />
+                  </div>
+                </div>
+              </div>
+
+              <div className={styles.skillIconWrapper}>
+                <div className={styles.skillIcon}>
+                  <div className={styles.iconPlaceholder}>
+                    <AndroidstudioOriginal size={40} />
+                  </div>
+                </div>
+              </div>
+
+              <div className={styles.skillIconWrapper}>
+                <div className={styles.skillIcon}>
+                  <div className={styles.iconPlaceholder}>
+                    <IntellijOriginal size={40} />
+                  </div>
+                </div>
+              </div>
+              <div className={styles.skillIconWrapper}>
+                <div className={styles.skillIcon}>
+                  <div className={styles.iconPlaceholder}>
+                    <PycharmOriginal size={40} />
+                  </div>
+                </div>
+              </div>
+              <div className={styles.skillIconWrapper}>
+                <div className={styles.skillIcon}>
+                  <div className={styles.iconPlaceholder}>
+                    <VercelOriginalWordmark size={40} />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
