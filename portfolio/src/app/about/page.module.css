@@ -13,6 +13,156 @@
   color: white;
   transition: all 0.5s ease;
 }
+
+/* Centered Hero Section */
+.centeredHero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.profileContainer {
+  margin-bottom: 2rem;
+}
+
+.profileImageWrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  border: 3px solid #01163a;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.profileImage {
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.profileImageWrapper:hover .profileImage {
+  transform: scale(1.05);
+}
+
+.onlineIndicator {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 20px;
+  height: 20px;
+  background-color: #10b981;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+}
+
+.centeredName {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.centeredTitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1.5rem;
+}
+
+.centeredDescription {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+}
+
+.centeredButtons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.primaryButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #fbbf24, #f59e0b);
+  color: #1f2937;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(55, 53, 46, 0.3);
+}
+
+.secondaryButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.secondaryButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.socialLink:hover {
+  color: #020c8d;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+/* Original styles for the rest of the page */
 .hero {
   display: flex;
   align-items: center;
@@ -63,60 +213,11 @@
   flex-wrap: wrap;
 }
 
-.primaryButton {
-  background: linear-gradient(45deg, #fbbf24, #f59e0b);
-  color: #1f2937;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 1rem;
-}
-
-.primaryButton:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(55, 53, 46, 0.3);
-}
-
-.secondaryButton {
-  background: transparent;
-  color: white;
-  border: 2px solid rgba(255, 255, 255, 0.4);
-  padding: 10px 24px;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 1rem;
-}
-
-.secondaryButton:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.6);
-  transform: translateY(-2px);
-}
-
 .heroImage {
   flex: 0 0 300px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.profileContainer {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  position: relative;
-  overflow: hidden;
-  border: 3px solid #01163a;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-.profileImage {
-  object-fit: cover;
 }
 
 .technicalSkills {
@@ -242,24 +343,41 @@
   margin-bottom: 1.5rem;
 }
 
-.socialLinks {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-}
-
-.socialLink {
-  color: white;
-  transition: all 0.3s ease;
-}
-
-.socialLink:hover {
-  color: #020c8d;
-  transform: translateY(-3px);
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
+  .centeredHero {
+    padding: 1rem;
+    min-height: 90vh;
+  }
+
+  .profileImageWrapper {
+    width: 150px;
+    height: 150px;
+  }
+
+  .centeredName {
+    font-size: 2.5rem;
+  }
+
+  .centeredTitle {
+    font-size: 1.2rem;
+  }
+
+  .centeredDescription {
+    font-size: 1rem;
+  }
+
+  .centeredButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    max-width: 300px;
+  }
+
   .hero {
     flex-direction: column;
     text-align: center;
@@ -278,14 +396,22 @@
   .skillsColumns {
     grid-template-columns: 1fr;
   }
-
-  .profileContainer {
-    width: 250px;
-    height: 250px;
-  }
 }
 
 @media (max-width: 480px) {
+  .centeredName {
+    font-size: 2rem;
+  }
+
+  .centeredTitle {
+    font-size: 1rem;
+  }
+
+  .profileImageWrapper {
+    width: 120px;
+    height: 120px;
+  }
+
   .heroTitle {
     font-size: 2rem;
   }
@@ -296,10 +422,5 @@
 
   .skillIconGrid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .profileContainer {
-    width: 200px;
-    height: 200px;
   }
 }

@@ -2,8 +2,28 @@
 
 import Image from "next/image";
 import my_logo from "../assets/my_logo-removebg-preview.png";
+import Link from "next/link";
+import { Montserrat } from "next/font/google";
+const montserrat = Montserrat({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+});
 
 export default function Navbar() {
+  const handleScrollToSkills = () => {
+    window.scrollTo({
+      top: document.getElementById("skills")?.offsetTop || 0,
+      behavior: "smooth",
+    });
+  };
+
+  const handleScrollToExperience = () => {
+    window.scrollTo({
+      top: document.getElementById("MyStory")?.offsetTop || 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <nav
       style={{
@@ -24,21 +44,76 @@ export default function Navbar() {
         }}
       >
         <div style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
-          <Image src={my_logo} alt="Profile" width={80} height={80} />
+          <Link href="/">
+            <Image
+              src={my_logo}
+              alt="Profile"
+              width={80}
+              height={80}
+              style={{ cursor: "pointer" }}
+            />
+          </Link>{" "}
         </div>
         <div style={{ display: "flex", gap: "2rem" }}>
-          <a href="/" style={{ color: "white", textDecoration: "none" }}>
-            Home
-          </a>
-          <a href="/about" style={{ color: "white", textDecoration: "none" }}>
-            About
-          </a>
-          <a href="#" style={{ color: "white", textDecoration: "none" }}>
+          <button
+            className={montserrat.className}
+            style={{
+              color: "white",
+              textDecoration: "none",
+              background: "transparent",
+              border: "none",
+              cursor: "pointer",
+              fontSize: "1.2rem",
+              fontWeight: "500",
+            }}
+          >
             Projects
-          </a>
-          <a href="#" style={{ color: "white", textDecoration: "none" }}>
-            Contact
-          </a>
+          </button>
+          <button
+            className={montserrat.className}
+            style={{
+              color: "white",
+              textDecoration: "none",
+              background: "transparent",
+              border: "none",
+              cursor: "pointer",
+              fontSize: "1.2rem",
+              fontWeight: "500",
+            }}
+            onClick={handleScrollToSkills}
+          >
+            Skills
+          </button>
+          <button
+            className={montserrat.className}
+            style={{
+              color: "white",
+              textDecoration: "none",
+              background: "transparent",
+              border: "none",
+              cursor: "pointer",
+              fontSize: "1.2rem",
+              fontWeight: "500",
+            }}
+            onClick={handleScrollToExperience}
+          >
+            Experience
+          </button>
+          <button
+            className={montserrat.className}
+            style={{
+              color: "white",
+              textDecoration: "none",
+              background: "transparent",
+              border: "none",
+              cursor: "pointer",
+              fontSize: "1.2rem",
+              fontWeight: "500",
+            }}
+            onClick={handleScrollToExperience}
+          >
+            About
+          </button>
         </div>
       </div>
     </nav>
