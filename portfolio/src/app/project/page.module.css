@@ -1,0 +1,720 @@
+/* Projects Page CSS Module - page.module.css */
+
+.container {
+  min-height: 100vh;
+  background: linear-gradient(
+      135deg,
+      rgba(19, 78, 94, 0.7) 0%,
+      rgba(1, 10, 67, 0.7) 100%
+    ),
+    url("https://windowscustomization.com/wp-content/uploads/2018/11/the-city-in-the-rain.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  transition: all 0.5s ease;
+}
+
+.projectsHero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 60vh;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-top: 120px;
+  position: relative;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(45deg, #fbbf24, #f59e0b);
+  color: #1f2937;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  text-decoration: none;
+  gap: 0.5rem;
+  position: absolute;
+  top: 40px;
+  left: 2rem;
+  z-index: 10;
+}
+
+.backButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(55, 53, 46, 0.3);
+}
+
+.projectsTitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.accent {
+  background: linear-gradient(45deg, #fbbf24, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.projectsSubtitle {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+}
+
+.filterTabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  padding: 0 2rem;
+}
+
+.filterButton {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.filterButton:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+.filterButton.active {
+  background: linear-gradient(45deg, #fbbf24, #f59e0b);
+  color: #1f2937;
+  border-color: transparent;
+}
+
+.filterButton.active:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(55, 53, 46, 0.3);
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 80px;
+}
+
+.projectCard {
+  background: rgba(30, 42, 58, 0.8);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.projectCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.projectImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.projectCard:hover .projectImage {
+  transform: scale(1.05);
+}
+
+.projectContent {
+  padding: 2rem;
+}
+
+.projectHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.projectTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.projectDate {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.featuredBadge {
+  background: linear-gradient(45deg, #fbbf24, #f59e0b);
+  color: #1f2937;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.projectDescription {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.techTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.techTag {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.projectStats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.statItem {
+  text-align: center;
+}
+
+.statValue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  color: white;
+  font-weight: 600;
+}
+
+.statLabel {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8rem;
+}
+
+.projectButtons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.primaryButton {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(45deg, #fbbf24, #f59e0b);
+  color: #1f2937;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  text-decoration: none;
+  gap: 0.5rem;
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(55, 53, 46, 0.3);
+}
+
+.secondaryButton {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  text-decoration: none;
+  gap: 0.5rem;
+}
+
+.secondaryButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+.footer {
+  padding: 2rem 5%;
+  background: linear-gradient(
+    135deg,
+    rgba(19, 78, 94, 0.7) 0%,
+    rgba(1, 10, 67, 0.7) 100%
+  );
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.footerText {
+  font-family: monospace;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1.5rem;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.socialLink:hover {
+  color: #020c8d;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projectsHero {
+    padding: 1rem;
+    padding-top: 100px;
+    min-height: 50vh;
+  }
+
+  .backButton {
+    top: 20px;
+    left: 1rem;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .projectsTitle {
+    font-size: 2.5rem;
+  }
+
+  .projectsSubtitle {
+    font-size: 1rem;
+  }
+
+  .projectsGrid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem 60px;
+  }
+
+  .filterTabs {
+    padding: 0 1rem;
+  }
+
+  .projectButtons {
+    flex-direction: column;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    justify-content: center;
+  }
+}
+
+.homeButtonContainer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.homeButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #f59e0b; /* Matches your accent color */
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.homeButton:hover {
+  background-color: #d97706;
+  transform: translateY(-2px);
+}
+@media (max-width: 480px) {
+  .projectsTitle {
+    font-size: 2rem;
+  }
+
+  .backButton {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+    gap: 0.25rem;
+  }
+
+  .projectsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .projectCard {
+    margin: 0;
+  }
+
+  .projectContent {
+    padding: 1.5rem;
+  }
+
+  .filterTabs {
+    gap: 0.5rem;
+  }
+
+  .filterButton {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+}
+.homeButtonContainer {
+  margin-top: 2.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.exceptionalHomeButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
+  color: #1f2937;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.exceptionalHomeButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.exceptionalHomeButton:hover::before {
+  left: 100%;
+}
+
+.exceptionalHomeButton:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(245, 158, 11, 0.6);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.homeButtonIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.exceptionalHomeButton:hover .homeButtonIcon {
+  background: rgba(255, 255, 255, 0.3);
+  transform: rotate(-10deg);
+}
+
+.homeButtonText {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  position: relative;
+  z-index: 2;
+}
+
+.homeButtonGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(
+    circle,
+    rgba(245, 158, 11, 0.3) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.exceptionalHomeButton:hover .homeButtonGlow {
+  opacity: 1;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.1;
+  }
+}
+
+/* Responsive adjustments for the exceptional home button */
+@media (max-width: 768px) {
+  .exceptionalHomeButton {
+    padding: 0.875rem 1.75rem;
+    font-size: 1rem;
+    gap: 0.5rem;
+  }
+
+  .homeButtonIcon {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .exceptionalHomeButton {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .homeButtonIcon {
+    width: 24px;
+    height: 24px;
+  }
+}
+.topHomeButtonContainer {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.exceptionalHomeButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
+  color: #1f2937;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.exceptionalHomeButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.exceptionalHomeButton:hover::before {
+  left: 100%;
+}
+
+.exceptionalHomeButton:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(245, 158, 11, 0.6);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.homeButtonIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.exceptionalHomeButton:hover .homeButtonIcon {
+  background: rgba(255, 255, 255, 0.3);
+  transform: rotate(-10deg);
+}
+
+.homeButtonText {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  position: relative;
+  z-index: 2;
+}
+
+.homeButtonGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(
+    circle,
+    rgba(245, 158, 11, 0.3) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.exceptionalHomeButton:hover .homeButtonGlow {
+  opacity: 1;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.1;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .topHomeButtonContainer {
+    top: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .exceptionalHomeButton {
+    padding: 0.875rem 1.75rem;
+    font-size: 1rem;
+    gap: 0.5rem;
+  }
+
+  .homeButtonIcon {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .topHomeButtonContainer {
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .exceptionalHomeButton {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .homeButtonIcon {
+    width: 24px;
+    height: 24px;
+  }
+}

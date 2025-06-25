@@ -7,8 +7,6 @@ import {
   Github,
   MapPin,
   Calendar,
-  Code,
-  Heart,
   Download,
 } from "lucide-react";
 import Image from "next/image";
@@ -135,7 +133,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Rest of your content */}
       <section className={styles.technicalSkills} id="MyStory">
         <div
           className={styles.skillsColumns}

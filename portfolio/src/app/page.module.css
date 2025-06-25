@@ -25,10 +25,12 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
+  padding-top: 120px; /* Add space from header */
 }
 
 .profileContainer {
   margin-bottom: 2rem;
+  margin-top: 40px; /* Additional margin for the profile picture */
 }
 
 .profileImageWrapper {
@@ -347,7 +349,12 @@
 @media (max-width: 768px) {
   .centeredHero {
     padding: 1rem;
+    padding-top: 100px; /* Adjusted for mobile */
     min-height: 90vh;
+  }
+
+  .profileContainer {
+    margin-top: 20px; /* Reduced margin for mobile */
   }
 
   .profileImageWrapper {
@@ -399,6 +406,14 @@
 }
 
 @media (max-width: 480px) {
+  .centeredHero {
+    padding-top: 80px; /* Further adjusted for smaller screens */
+  }
+
+  .profileContainer {
+    margin-top: 10px; /* Minimal margin for very small screens */
+  }
+
   .centeredName {
     font-size: 2rem;
   }
