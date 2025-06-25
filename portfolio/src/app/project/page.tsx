@@ -8,9 +8,6 @@ import {
   Code,
   Calendar,
   Star,
-  GitBranch,
-  Eye,
-  ArrowLeft,
   Home,
 } from "lucide-react";
 import styles from "./page.module.css";
@@ -110,7 +107,6 @@ const Projects = () => {
       date: "Dec 2024",
       category: "desktop",
       featured: false,
-      githubUrl: "https://github.com/FahamGoraya/SketchFX-",
       image: "https://itsfoss.com/content/images/2023/07/Pinta-1.png",
     },
     {
@@ -121,7 +117,6 @@ const Projects = () => {
       date: "Sep 2024",
       category: "desktop",
       featured: false,
-      githubUrl: "https://github.com/FahamGoraya/Othello-Game",
       image:
         "https://www.logos.t.u-tokyo.ac.jp/orientation/REVERSIAnOthellotypegame.png",
     },
@@ -141,8 +136,6 @@ const Projects = () => {
       date: "Dec 2023",
       category: "data",
       featured: false,
-      githubUrl:
-        "https://github.com/FahamGoraya/MewbileTech-Phone-Management-System",
       image:
         "https://www.sine.co/wp-content/uploads/2021/05/Blog-Benefits-Mobile-based-VMS-1.png",
       stats: { stars: 22, forks: 7, views: "680" },
@@ -151,7 +144,6 @@ const Projects = () => {
 
   return (
     <div className={styles.container}>
-      {/* Exceptional Home Button */}
       <div className={styles.topHomeButtonContainer}>
         <a href="/" className={styles.exceptionalHomeButton}>
           <div className={styles.homeButtonIcon}>

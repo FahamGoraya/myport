@@ -53,14 +53,6 @@ export default function Navbar() {
     }
   };
 
-  const handleScrollToSection = (sectionId: string): void => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-      setActiveLink(sectionId);
-    }
-  };
-
   const handleProjectsRedirect = (): void => {
     router.push("/project");
   };
@@ -106,7 +98,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", requestScrollUpdate);
   }, []);
 
-  // Update floating indicator position
   useEffect(() => {
     const updateIndicator = (): void => {
       if (!navLinksRef.current) return;
@@ -131,7 +122,6 @@ export default function Navbar() {
     return () => window.removeEventListener("resize", updateIndicator);
   }, [activeLink]);
 
-  // Mouse tracking for particle effects
   const handleMouseMove = (
     e: React.MouseEvent<HTMLButtonElement>,
     buttonRef: HTMLButtonElement

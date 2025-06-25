@@ -25,12 +25,12 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
-  padding-top: 120px; /* Add space from header */
+  padding-top: 120px;
 }
 
 .profileContainer {
   margin-bottom: 2rem;
-  margin-top: 40px; /* Additional margin for the profile picture */
+  margin-top: 40px;
 }
 
 .profileImageWrapper {
@@ -164,7 +164,6 @@
   transform: translateY(-3px);
 }
 
-/* Original styles for the rest of the page */
 .hero {
   display: flex;
   align-items: center;
@@ -345,16 +344,15 @@
   margin-bottom: 1.5rem;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .centeredHero {
     padding: 1rem;
-    padding-top: 100px; /* Adjusted for mobile */
+    padding-top: 100px;
     min-height: 90vh;
   }
 
   .profileContainer {
-    margin-top: 20px; /* Reduced margin for mobile */
+    margin-top: 20px;
   }
 
   .profileImageWrapper {
@@ -407,11 +405,11 @@
 
 @media (max-width: 480px) {
   .centeredHero {
-    padding-top: 80px; /* Further adjusted for smaller screens */
+    padding-top: 80px;
   }
 
   .profileContainer {
-    margin-top: 10px; /* Minimal margin for very small screens */
+    margin-top: 10px;
   }
 
   .centeredName {

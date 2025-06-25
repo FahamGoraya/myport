@@ -1,6 +1,3 @@
-/* Navbar.module.css */
-
-/* Focus States for Accessibility */
 .navLink:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.5);
@@ -11,7 +8,6 @@
   filter: drop-shadow(0 0 10px rgba(96, 165, 250, 0.8));
 }
 
-/* Navbar Base Styles */
 .navbar {
   position: fixed;
   top: 0;
@@ -25,7 +21,6 @@
   transform: translateY(0);
 }
 
-/* Scrolled state with enhanced blur */
 .navbar.scrolled {
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(25px);
@@ -34,7 +29,6 @@
   padding: 0.8rem 5%;
 }
 
-/* Hidden state for scroll animations */
 .navbar.hidden {
   transform: translateY(-100%);
 }
@@ -49,7 +43,6 @@
   position: relative;
 }
 
-/* Interactive Logo */
 .logo {
   font-size: 1.8rem;
   font-weight: bold;
@@ -90,7 +83,6 @@
   }
 }
 
-/* Navigation Links Container */
 .navLinks {
   display: flex;
   gap: 0.5rem;
@@ -102,7 +94,6 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Floating Active Indicator */
 .floatingIndicator {
   position: absolute;
   height: calc(100% - 8px);
@@ -121,7 +112,6 @@
   transform: scale(1);
 }
 
-/* Enhanced Navigation Links */
 .navLink {
   background: none;
   border: none;
@@ -140,7 +130,6 @@
   white-space: nowrap;
 }
 
-/* Magnetic Effect */
 .navLink:hover {
   color: white;
   transform: translateY(-2px) scale(1.05);
@@ -153,7 +142,6 @@
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
-/* Ripple Effect */
 .navLink::before {
   content: "";
   position: absolute;
@@ -183,7 +171,6 @@
   );
 }
 
-/* Particle Effect */
 .navLink::after {
   content: "";
   position: absolute;
@@ -206,7 +193,6 @@
   opacity: 1;
 }
 
-/* Enhanced Bounce Animation */
 @keyframes bounceIn {
   0% {
     opacity: 0;
@@ -225,7 +211,6 @@
   }
 }
 
-/* Staggered Animation */
 .navLink {
   animation: bounceIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
 }
@@ -246,7 +231,6 @@
   animation-delay: 0.5s;
 }
 
-/* Pulsing Glow Effect */
 @keyframes pulseGlow {
   0%,
   100% {
@@ -262,7 +246,6 @@
   animation: pulseGlow 2s ease-in-out infinite;
 }
 
-/* Responsive Design - Simplified */
 @media screen and (max-width: 768px) {
   .navbar {
     padding: 1rem 4%;
@@ -297,7 +280,6 @@
   }
 }
 
-/* Scroll Progress Indicator */
 .scrollProgress {
   position: absolute;
   bottom: 0;
@@ -309,7 +291,6 @@
   transition: transform 0.1s ease;
 }
 
-/* Hover Sound Effect Indicator */
 .navLink:hover {
   position: relative;
 }
@@ -331,12 +312,10 @@
   }
 }
 
-/* Smooth Transitions */
 .navbar * {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* High contrast mode support */
 @media (prefers-contrast: high) {
   .navbar {
     background: rgba(0, 0, 0, 0.9);
@@ -347,7 +326,6 @@
   }
 }
 
-/* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   .navbar,
   .navLink,

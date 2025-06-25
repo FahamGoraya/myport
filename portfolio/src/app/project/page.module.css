@@ -1,5 +1,3 @@
-/* Projects Page CSS Module - page.module.css */
-
 .container {
   min-height: 100vh;
   background: linear-gradient(
@@ -391,7 +389,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
-  background-color: #f59e0b; /* Matches your accent color */
+  background-color: #f59e0b;
   color: white;
   text-decoration: none;
   border-radius: 0.5rem;
@@ -681,7 +679,6 @@
   }
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .topHomeButtonContainer {
     top: 1.5rem;
