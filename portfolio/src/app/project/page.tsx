@@ -64,7 +64,7 @@ const Projects = () => {
       date: "June 2025",
       category: "fullstack",
       featured: true,
-      liveUrl: "https://gimovies.onrender.com/",
+      liveUrl: "https://reelpicks-dnc0.onrender.com/",
       githubUrl: "https://github.com/FahamGoraya/reelpicks",
       image: "https://i.ibb.co/hFB49YQg/image.png",
     },
